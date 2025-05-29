@@ -1,11 +1,10 @@
 //Логіка сторінки Home
 import { refs } from "./js/refs";
-import { getProductList } from "./js/products-api";
-import { createCategoriesMarkup } from "./js/render-function";
-import { renderPage, renderProducts } from "./js/handlers";
-import { getAllProducts } from "./js/products-api";
+import { renderPage, renderProducts, renderSelectCategory } from "./js/handlers";
 
-document.addEventListener("DOMContentLoaded", renderPage)
+document.addEventListener("DOMContentLoaded", renderPage);
 
 
-refs.form.addEventListener("submit", renderProducts)
+refs.form.addEventListener("submit", renderProducts);
+
+refs.categoriesList.addEventListener("click", renderSelectCategory);

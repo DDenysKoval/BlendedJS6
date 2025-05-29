@@ -2,18 +2,23 @@
 import { refs } from "./refs";
 
 export function createCategoriesMarkup(arr) {
+  arr.unshift("All");
   return arr.map(item => `
-    <li class="categories-item">${item}</li>`)
+    <li class="categories__item">
+      <button class="categories__btn" type="button">${item}</button>
+    </li>`)
     .join("");
 }
 
 export function createProductsMarkup(arr) {
   return arr.map(product => `
-    <li class="product-item">
-      <h2 class="product-title">${product.title}</h2>
-      <p class="product-text">${product.brand}</p>
-      <img src="${product.thumbnail}" alt="${product.description}">
-      <p class="product-price">$${product.price}</p>
+    <li class="products__item" data-id="${product.id}">
+      <img class="products__image" src="${product.thumbnail}" alt="${product.description}"/>
+      <p class="products__title">${product.title}</p>
+      <p class="products__brand"><span class="products__brand--bold">Brand: ${product.brand}</span></p>
+      <p class="products__category">Category: ${product.category}  </p>
+      <p class="products__price">Price: ${product.price}$</p>
     </li>`)
     .join("");;
 }
+
