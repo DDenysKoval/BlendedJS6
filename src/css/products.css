@@ -82,3 +82,34 @@
     color: #e05a00;
   }
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.load-more-btn {
+  display: block;  
+  padding: 0 2rem;
+  margin: 0 auto;
+  margin-top: 32px;
+  color: white;
+  font-weight: 600;
+
+  border: none;
+  border-radius: 30px;
+  background: #ff6b0a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 32px;
+
+  &:hover,
+  &:focus {
+    background-color: #e05a00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 10, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

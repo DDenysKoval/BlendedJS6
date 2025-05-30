@@ -1,6 +1,5 @@
 // Функції для роботи з бекендом
 import axios from "axios";
-import { currentPage, renderSelectCategory } from "./handlers";
 
 
 export async function getProductList() {
@@ -11,11 +10,11 @@ export async function getProductList() {
     console.log(error.message);
   }
 }
+export const limit = 12;
 
-
-export async function getAllProducts() {
+export async function getAllProducts(currentPage) {
   const params = {
-    limit: 12,
+    limit,
     skip: (currentPage - 1) * 12,
     orientation: "portrait",
   }
@@ -27,7 +26,7 @@ export async function getAllProducts() {
   }
 }
 
-export async function getCategoryItems(category) {
+export async function getCategoryItems(category, currentPage) {
   const params = {
     limit: 12,
     skip: (currentPage - 1) * 12,

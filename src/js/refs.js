@@ -4,5 +4,6 @@ export const refs = {
   form: document.querySelector(".search-form"),
   categoriesList: document.querySelector(".categories"),
   productsList: document.querySelector(".products"),
-  // allButtons: document.querySelectorAll(".categories__btn"),
+  loadMore: document.querySelector(".load-more-btn"),
+  card: document.querySelector(".products__item"),
 };

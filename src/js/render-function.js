@@ -22,3 +22,10 @@ export function createProductsMarkup(arr) {
     .join("");;
 }
 
+export function hideLoadMoreBtn() {
+  refs.loadMore.classList.add("hidden");
+}
+
+export function showLoadMoreBtn() {
+  refs.loadMore.classList.remove("hidden");
+}
